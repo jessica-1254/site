@@ -1,0 +1,278 @@
+/* RESET E FONTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* ESTILO DO BODY */
+body {
+    height: auto;
+    background-color: rgb(96, 84, 69); /* Fundo principal */
+    color: white;
+}
+
+/* INTERFACE CENTRALIZADA */
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ESTILO DO HEADER */
+header {
+    width: 100%;
+    padding: 40px 2%;
+    position: sticky;
+    top: 0;
+    background-color: rgb(96, 84, 69);
+    z-index: 10;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu-desktop nav ul {
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .menu-desktop nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.menu-desktop nav a:hover {
+    transform: scale(1.05);
+}
+
+header .btn-contato button {
+    width: 140px;
+    height: 50px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+header .btn-contato button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* ESTILO DAS VANTAGENS */
+section.vantagens {
+    padding: 60px 0; /* Reduzido para deixar mais compacto */
+}
+
+/* BLOCO GERAL DE CADA ITEM */
+.bloco-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout 3 colunas - para o conteúdo principal dentro do bloco */
+.conteudo-3colunas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+    text-align: center;
+}
+
+/* Cada coluna */
+.coluna {
+    flex: 1 1 32%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Para a coluna de imagem */
+.coluna.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.coluna.imagem img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+/* Para o texto que fica abaixo das 3 colunas (MANUTENÇÃO) */
+.txt-itens {
+    margin-top: 20px;
+}
+
+.txt-itens h4 {
+    font-size: 1.4em;
+    margin-bottom: -10px;
+}
+
+.txt-itens p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Estilo para os títulos (h1, h3, etc.) */
+h1, h3, h4 {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-top: 15px;
+}
+
+/* Estilo das colunas e textos */
+.coluna-sobre {
+    flex: 1 1 32%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* MEDIA QUERY PARA TABLETS */
+@media (max-width: 1024px) {
+    .header .interface {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-desktop nav ul li {
+        padding: 0 20px;
+    }
+
+    .conteudo-3colunas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna, .coluna-sobre {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 20px 0;
+    }
+
+    .coluna.imagem img {
+        max-width: 300px;
+    }
+}
+
+/* MEDIA QUERY PARA CELULARES */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    header .menu-desktop nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header .menu-desktop nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    header .btn-contato button {
+        width: 100%;
+        max-width: 200px;
+        font-size: 16px;
+    }
+
+    .conteudo-3colunas {
+        gap: 30px;
+    }
+
+    .coluna, .coluna-sobre {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .txt-itens p {
+        font-size: 0.95em;
+    }
+}
+
+/* AJUSTE GERAL PARA TELAS MUITO PEQUENAS */
+@media (max-width: 480px) {
+    .interface {
+        padding: 0 10px;
+    }
+
+    header .btn-contato button {
+        font-size: 14px;
+        height: 45px;
+    }
+
+    h1, h3, h4 {
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .coluna.imagem img {
+        max-width: 100%;
+    }
+}
